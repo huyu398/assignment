@@ -13,9 +13,23 @@
 
 ## How to work
 
-1. ブランチを切る。`git checkout {assignment_name}`
-2. 問題と解く。GuardでのテストがオールグリーンになったらOK!
-3. 回答をコミットする。`git add {file_name} && git commit -m '{message}'`
-4. ブランチをPushする。`git push enfactv {assignment_name}`
-5. Pull-requestを送る。`hub pull-request -b enfactv:master -h enfactv:{assignment_name}`
-6. 完了!
+問題を解いてから、回答を送るまでの流れをやってみます。
+
+# 1. 問題のファイル名を確認する
+  - `ls lib/`
+  - `ruby_001.rb`を解いてみる
+# 2. 問題を解くためにブランチを切る
+  - `bundle exec rake solve`
+  - 問題名を求められるので、`ruby_001`と入力する
+# 3. 問題を解く
+  - guardを起動する
+    - オールグリーンになるまで解いてみる
+# 5. コミットする
+  - `git commit -am '{message}'`
+# 6. Pull-requestを送る
+  - 初めて送る場合
+    - bundle exec rake pull_request
+  - 2回目以降
+    - すでにPull-requestがあるよ！っていわれる場合は、ブランチをPushするだけでいい。
+    - `git push origin {ブランチ名}`
+# 7. 完了！

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Solver do
+describe Ruby001 do
   describe '#solve' do
-    subject { Solver.new(size).solve }
+    subject { Ruby001.new(size).solve }
 
     patterns = {
       1 => 1,

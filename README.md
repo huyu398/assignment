@@ -13,9 +13,10 @@
 
 ## How to work
 
-1. ブランチを切る。`git checkout {assignment_name}`
-2. 問題と解く。GuardでのテストがオールグリーンになったらOK!
-3. 回答をコミットする。`git add {file_name} && git commit -m '{message}'`
-4. ブランチをPushする。`git push enfactv {assignment_name}`
-5. Pull-requestを送る。`hub pull-request -b enfactv:master -h enfactv:{assignment_name}`
+`ruby_002`を解く場合
+
+1. `bundle exec rake solve\[ruby_002\]` ブランチを切る
+2. Guardでのテストがオールグリーンになるまで解く!
+3. `git commit -am 'message'` 回答をコミットする
+4. `bundle exec rake pull_request` 回答をPull-Requestする
 6. 完了!

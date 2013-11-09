@@ -54,7 +54,7 @@ task :pull_request, :title do |t, args|
   branch = branch_name
   message = "[#{branch}](#{ENV['USER']}) #{Time.now.strftime('%x %R')} "
   sys "git push #{repository} #{branch}"
-  sys "hub pull-request -b enfactv:master -h enfactv:#{branch} -m #{message}"
+  sys "hub pull-request '#{message}' -b enfactv:master -h enfactv:#{branch}"
 end
 
 def owner?
@@ -71,5 +71,6 @@ def branch_name
 end
 
 def sys(message)
+  print "#{message}\n"
   `#{message}`
 end

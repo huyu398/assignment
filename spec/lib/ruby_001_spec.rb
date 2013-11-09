@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_ruby('ruby_001')
 
 describe Ruby001 do
   describe '#solve' do
